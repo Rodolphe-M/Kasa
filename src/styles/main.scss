@@ -1,0 +1,26 @@
+// 1 - HELPERS
+
+@import '1-helpers/functions.scss';
+@import '1-helpers/mixins.scss';
+@import '1-helpers/variables.scss';
+
+// 2 - COMPONENTS
+
+@import '2-components/card.scss';
+@import '2-components/footer.scss';
+@import '2-components/header.scss';
+@import '2-components/collapse.scss';
+
+// 3 - PAGES
+
+@import '3-pages/about.scss';
+@import '3-pages/error.scss';
+@import '3-pages/home.scss';
+@import '3-pages/logement.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Ceci assure que la taille totale d'un élément comprend les marges, les paddings et les bordures.
+  }
+  

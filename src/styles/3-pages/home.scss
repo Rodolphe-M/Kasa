@@ -1,0 +1,27 @@
+.home {
+    margin: 20px 50px 20px 50px;
+        .home-title {
+            @include banner;
+            background-image: url('../../assets/img-home.png');
+        }
+        .home-title:before {
+            content: "";
+            position: absolute;
+            border-radius: 25px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Modifier la valeur alpha (dernier paramètre) pour ajuster l'opacité */
+        }
+            h1 {
+                color: white;
+                font-size: 48px;  
+                display: block;
+                position: absolute;
+            }
+        
+        }
+
+
+

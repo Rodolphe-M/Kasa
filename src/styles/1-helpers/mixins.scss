@@ -1,0 +1,14 @@
+@mixin banner {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  };
+
+@mixin collapse {
+    
+}

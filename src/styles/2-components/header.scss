@@ -1,0 +1,22 @@
+.navbar {
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px 10px 50px; 
+}
+
+.navbar__logo {
+    padding: 5px;
+} 
+
+.link {
+    margin: 20px;
+    text-decoration: none;
+    color: #FF6060;
+    font-size: 24px;
+}
+
+.link:hover {
+    text-decoration: underline 1px #FF6060;
+}    
