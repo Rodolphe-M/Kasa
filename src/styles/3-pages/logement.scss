@@ -47,7 +47,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            height: 120px;
+            height: 90px;
             img {
                 width: 64px;
                 height: 64px;
@@ -56,20 +56,29 @@
             }
             p {
                 color: $main-color;
-                font-size: 18px;
-                width: 100%;
+                font-size: 24px;
+                width: 115px;
                 margin: 5px;
             }
         }
-        .star-active {
-            color: $main-color;
-        }
-        .star-inactive {
-            color: lightgray;
+        .rating {
+            display: flex;
+            .star-active {
+                color: $main-color;
+                margin: 5px;
+                height: 30px;
+                width: 30px;
+            }
+            .star-inactive {
+                color: lightgray;
+                margin: 5px;
+                height: 30px;
+                width: 30px;
+            }
         }
     }
 }
-.image-slideshow {
+.slideshow {
     background-color: $main-color;
     height: 415px;
     width: 100%;

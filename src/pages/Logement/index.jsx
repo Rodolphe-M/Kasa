@@ -21,7 +21,7 @@ const Logement = () => {
 
     return (
         <div className="container-logement">
-            {/*<Slideshow />*/}
+            <div className="slideshow">{/*<Slideshow />*/}</div>
             <div className="logement">
                 <div className="logement__title">
                     <h2>{logement.title}</h2>
