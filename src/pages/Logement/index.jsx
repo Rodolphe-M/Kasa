@@ -33,7 +33,7 @@ const Logement = () => {
 
     return (
         <div className="container-logement">
-            <div className="slideshow">{/*<Slideshow />*/}</div>
+            <Slideshow selectedLogement={logement} />
             <div className="logement">
                 <div className="logement__title">
                     <h2>{logement.title}</h2>
