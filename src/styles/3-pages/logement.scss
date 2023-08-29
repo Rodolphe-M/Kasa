@@ -1,6 +1,10 @@
+ul {
+    list-style: none;
+}
+
 .container-logement {
     width: 92%;
-    height: 643px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     margin: 20px 50px 10px 50px;
@@ -23,11 +27,8 @@
             font-size: 18px;
             margin-bottom: 20px;
         }
-        &__list {
-        }
         ul {
             display: flex;
-            list-style: none;
         }
         li {
             background-color: $main-color;
@@ -78,9 +79,21 @@
         }
     }
 }
+
 .slideshow {
     background-color: $main-color;
     height: 415px;
     width: 100%;
     border-radius: 25px;
+}
+
+@include collapse;
+
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    width: 48%;
+    padding: 0;
 }
