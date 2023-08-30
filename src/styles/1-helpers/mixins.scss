@@ -7,6 +7,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 599px) {
+        height: 111px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
 
 @mixin collapse {
@@ -27,7 +34,7 @@
                 align-items: center;
                 background-color: $main-color;
                 color: white;
-                font-size: 20px;
+                font-size: 24px;
                 height: 52px;
                 padding: 0 15px 0 15px;
                 border-radius: 5px;
@@ -57,6 +64,19 @@
                     height: fit-content;
                     transform: scaleY(1);
                     transition: transform 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+    @media (max-width: 599px) {
+        .wrapper {
+            &__collapse {
+                width: 100%;
+                margin-bottom: 0;
+                margin-top: 0px;
+                &__title {
+                    font-size: 20px;
+                    height: 35px;
                 }
             }
         }

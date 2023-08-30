@@ -5,20 +5,33 @@
     justify-content: space-between;
     align-items: center;
     margin: 30px 0 30px 0;
+    img {
+        padding: 5px;
+        margin-left: 50px;
+    }
+    .link {
+        margin: 10px;
+        text-decoration: none;
+        color: #ff6060;
+        font-size: 24px;
+    }
+    .link:hover {
+        text-decoration: underline 1px #ff6060;
+    }
 }
 
-.navbar__logo {
-    padding: 5px;
-    margin-left: 50px;
-}
-
-.link {
-    margin: 10px;
-    text-decoration: none;
-    color: #ff6060;
-    font-size: 24px;
-}
-
-.link:hover {
-    text-decoration: underline 1px #ff6060;
+@media (max-width: 599px) {
+    .navbar {
+        margin: 10px;
+        img {
+            margin: 0;
+            padding: 0;
+            height: 45px;
+            width: 145px;
+        }
+        .link {
+            font-size: 17px;
+            margin: 5px;
+        }
+    }
 }

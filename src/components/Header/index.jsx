@@ -4,7 +4,7 @@ import Logo from '../../assets/logo.svg'
 function Header() {
     return (
         <nav className="navbar">
-            <img src={Logo} alt="Logo Kasa" className="navbar__logo" />
+            <img src={Logo} alt="Logo Kasa" className="navbar-logo" />
             <div className="navbar__link">
                 <Link className="link" to="/">
                     Accueil

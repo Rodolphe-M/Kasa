@@ -10,6 +10,7 @@
 @import '2-components/footer.scss';
 @import '2-components/header.scss';
 @import '2-components/collapse.scss';
+@import '2-components/slideshow.scss';
 
 // 3 - PAGES
 
@@ -22,5 +23,4 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; // Ceci assure que la taille totale d'un élément comprend les marges, les paddings et les bordures.
-  }
-  
+}

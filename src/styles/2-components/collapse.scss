@@ -5,3 +5,11 @@
     margin: auto;
     padding-top: 60px;
 }
+
+@media (max-width: 599px) {
+    #wrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
