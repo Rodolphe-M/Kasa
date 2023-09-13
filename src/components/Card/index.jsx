@@ -7,8 +7,6 @@ const Card = () => {
         <div className="cards-container">
             {data.map((logement) => (
                 <div key={logement.id} className="cards-wrapper">
-                    {' '}
-                    {/* Ajout de la clé unique */}
                     <Link to={`/logement/${logement.id}`}>
                         <div className="cards">
                             <img

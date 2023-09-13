@@ -25,18 +25,22 @@ const Slideshow = ({ selectedLogement }) => {
                     />
                 </div>
                 <div className="carousel__btn">
-                    <img
-                        onClick={goToPreviousSlide}
-                        className="chevron-icon previous"
-                        src={Chevron}
-                        alt="chevron-logo"
-                    />
-                    <img
-                        onClick={goToNextSlide}
-                        className="chevron-icon next"
-                        src={Chevron}
-                        alt="chevron-logo"
-                    />
+                    {selectedLogement.pictures.length > 1 && ( // Condition ajoutée ici
+                        <>
+                            <img
+                                onClick={goToPreviousSlide}
+                                className="chevron-icon previous"
+                                src={Chevron}
+                                alt="chevron-logo"
+                            />
+                            <img
+                                onClick={goToNextSlide}
+                                className="chevron-icon next"
+                                src={Chevron}
+                                alt="chevron-logo"
+                            />
+                        </>
+                    )}
                 </div>
                 <div className="carousel__counter">
                     <p>{`${currentIndex + 1}/${
