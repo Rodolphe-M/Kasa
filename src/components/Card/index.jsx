@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import data from '../../utils/data/data.json'
 
-const Card = () => {
+const Card = ({ data }) => {
     return (
         <div className="cards-container">
             {data.map((logement) => (
