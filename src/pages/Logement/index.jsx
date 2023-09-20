@@ -1,24 +1,13 @@
 import { useState, React } from 'react'
 import { useParams } from 'react-router-dom'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Chevron from '../../assets/chevron.svg'
 import Slideshow from '../../components/Slideshow'
+import Star from '../../components/Star'
 import data from '../../utils/data/data.json'
 
 const Logement = () => {
     const { id } = useParams()
     const logement = data.find((logement) => logement.id === id)
-
-    const rating = parseInt(logement.rating)
-
-    const starArray = Array.from({ length: 5 }, (_, index) => (
-        <FontAwesomeIcon
-            key={index}
-            icon={faStar}
-            className={index < rating ? 'star-active' : 'star-inactive'}
-        />
-    ))
 
     const [selectedDescription, setSelectedDescription] = useState(false)
     const [selectedEquipment, setSelectedEquipment] = useState(false)
@@ -51,7 +40,10 @@ const Logement = () => {
                         <p>{logement.host.name}</p>
                         <img src={logement.host.picture} alt="owner" />
                     </div>
-                    <div className="rating">{starArray}</div>
+                    <div className="rating">
+                        {' '}
+                        <Star rating={logement.rating} />
+                    </div>
                 </div>
             </div>
 
