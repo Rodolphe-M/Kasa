@@ -1,8 +1,15 @@
 .about {
     margin: 20px 50px 20px 50px;
     &__img {
+        margin-bottom: 50px;
         @include banner;
         background-image: url('../../assets/montagne-about.png');
+    }
+    &__collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
     }
 }
 

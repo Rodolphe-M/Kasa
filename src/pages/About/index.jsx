@@ -6,9 +6,16 @@ const titreAbout = () => {
     return (
         <div className="about">
             <div className="about__img"></div>
-            {dataAbout.map((item, index) => (
-                <Collapse key={index} title={item.title} text={item.text} />
-            ))}
+            <div className="about__collapse">
+                {dataAbout.map((item, index) => (
+                    <Collapse
+                        key={index}
+                        title={item.title}
+                        text={item.text}
+                        width="100%"
+                    />
+                ))}
+            </div>
         </div>
     )
 }

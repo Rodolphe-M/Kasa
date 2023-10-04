@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Chevron from '../../assets/chevron.svg'
 
-function Collapse({ title, text }) {
+function Collapse({ title, text, width }) {
     const [isActive, setIsActive] = useState(false)
 
     const toggle = () => {
@@ -9,7 +9,7 @@ function Collapse({ title, text }) {
     }
 
     return (
-        <div className="wrapper" id="wrapper">
+        <div className="wrapper" id="wrapper" style={{ width: width }}>
             <div className="wrapper__collapse">
                 <div className="wrapper__collapse__title">
                     <h5>{title}</h5>
