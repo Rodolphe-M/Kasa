@@ -1,41 +1,33 @@
-import { useState, React } from 'react'
-import data from '../../utils/data/dataAbout.json'
+import React, { useState } from 'react'
 import Chevron from '../../assets/chevron.svg'
 
-function Collapse() {
-    const [selected, setSelected] = useState(null)
+function Collapse({ title, text }) {
+    const [isActive, setIsActive] = useState(false)
 
-    const toggle = (i) => {
-        if (selected === i) {
-            return setSelected(null)
-        }
-        setSelected(i)
+    const toggle = () => {
+        setIsActive(!isActive)
     }
 
     return (
         <div className="wrapper" id="wrapper">
-            {data.map((item, i) => (
-                <div className="wrapper__collapse" key={i}>
-                    <div className="wrapper__collapse__title">
-                        <h5>{item.title}</h5>
-                        <img
-                            onClick={() => toggle(i)}
-                            className={`chevron-icon ${
-                                selected === i ? 'active' : ''
-                            }`}
-                            src={Chevron}
-                            alt="chevron-logo"
-                        />
-                    </div>
-                    <div
-                        className={`wrapper__collapse__text ${
-                            selected === i ? 'active' : ''
-                        }`}
-                    >
-                        {item.text}
-                    </div>
+            <div className="wrapper__collapse">
+                <div className="wrapper__collapse__title">
+                    <h5>{title}</h5>
+                    <img
+                        onClick={toggle}
+                        className={`chevron-icon ${isActive ? 'active' : ''}`}
+                        src={Chevron}
+                        alt="chevron-logo"
+                    />
                 </div>
-            ))}
+                <div
+                    className={`wrapper__collapse__text ${
+                        isActive ? 'active' : ''
+                    }`}
+                >
+                    {text}
+                </div>
+            </div>
         </div>
     )
 }
