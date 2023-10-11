@@ -27,6 +27,7 @@ ul {
         }
         ul {
             display: flex;
+            flex-wrap: wrap;
         }
         li {
             background-color: $main-color;
