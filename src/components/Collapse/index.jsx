@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Chevron from '../../assets/chevron.svg'
 
+// Définition du composant "Collapse" qui prend les props "title", "text" et "width"
 function Collapse({ title, text, width }) {
+    // Déclaration d'un état local "isActive" avec la valeur initiale "false"
     const [isActive, setIsActive] = useState(false)
-
+    // Définition d'une fonction "toggle" qui modifie l'état "isActive" lorsqu'elle est appelée
     const toggle = () => {
         setIsActive(!isActive)
     }

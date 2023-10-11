@@ -1,3 +1,4 @@
+// Importation de useState depuis la bibliothèque React
 import React, { useState } from 'react'
 import Chevron from '../../assets/chevron.svg'
 
@@ -23,22 +24,28 @@ const Slideshow = ({ selectedLogement }) => {
     return (
         <div className="slideshow">
             <div className="carousel">
+                {/* Image du carrousel */}
                 <div className="carousel__img">
                     <img
                         src={selectedLogement.pictures[currentIndex]}
                         alt={`Slide ${currentIndex}`}
                     />
                 </div>
+
+                {/* Boutons de navigation du carrousel */}
                 <div className="carousel__btn">
+                    {/* Vérification s'il y a plus d'une image */}
                     {selectedLogement.pictures.length > 1 && (
                         <>
                             {' '}
+                            {/* Bouton de diapositive précédente */}
                             <img
                                 onClick={goToPreviousSlide}
                                 className="chevron-icon previous"
                                 src={Chevron}
                                 alt="chevron-logo"
                             />
+                            {/* Bouton de diapositive suivante */}
                             <img
                                 onClick={goToNextSlide}
                                 className="chevron-icon next"
@@ -48,6 +55,8 @@ const Slideshow = ({ selectedLogement }) => {
                         </>
                     )}
                 </div>
+
+                {/* Compteur de diapositives */}
                 <div className="carousel__counter">
                     <p>{`${currentIndex + 1}/${
                         selectedLogement.pictures.length
